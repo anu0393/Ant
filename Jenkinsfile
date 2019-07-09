@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
                 echo "Deploying to tomcat 7.x"
-		 bat(script: '**/*.war',  script: 'http://localhost:8080')
+		 
             }
         }
 	}
