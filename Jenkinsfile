@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
 		    echo "Deploying to tomcat 7.x"
-		 sh 'cp **/*.war C:/Users/user/Desktop/apache-tomcat-8.5.42-windows-x64/apache-tomcat-8.5.42/webapps'
+		 bat 'cp **/*.war http://localhost:8080'
             }
         }
 	}
