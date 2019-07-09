@@ -27,4 +27,4 @@ pipeline{
 				url: 'http://localhost:8080'
             }
         }
-	   
+	}
