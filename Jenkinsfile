@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
                 echo "Deploying to tomcat 7.x"
-		 copyArtifacts(filter: '**/*.war', target: 'http://localhost:8080')
+		 bat(filter: '**/*.war', target: 'http://localhost:8080')
             }
         }
 	}
