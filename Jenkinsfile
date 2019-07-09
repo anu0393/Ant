@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
 		    echo "Deploying to tomcat 7.x"
-		 sh 'cp target/**/*.war http://localhost:8080'
+		 sh 'cp **/*.war http://localhost:8080'
             }
         }
 	}
