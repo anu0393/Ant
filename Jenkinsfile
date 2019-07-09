@@ -23,10 +23,8 @@ pipeline{
 		
 		stage("Deploy") {
             steps {
-                echo "Deploying to tomcat 7.x"
 		 sh “curl -v -u username:admin -T ${**/*.war} ‘http://localhost:8080’”
-
-"
+		 echo "Deploying to tomcat 7.x"
             }
         }
 	}
