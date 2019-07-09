@@ -24,7 +24,8 @@ pipeline{
 		stage("Deploy") {
             steps {
                 echo "Deploying to tomcat 7.x"
-		 curl -s --upload-file **/*.war "http://user:admin@localhost:8080/manager/text/deploy?path=/myapp&update=true&tag=${BUILD_TAG}"
+		 curl -s --upload-file target/**/*.war "http://user:admin:password:admin@http://localhost:8080"
+
 "
             }
         }
