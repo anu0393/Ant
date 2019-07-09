@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
 		    echo "Deploying to tomcat 7.x"
-		 bat 'cp **/*.war http://localhost:8080'
+		 bat 'copy **/*.war http://localhost:8080'
             }
         }
 	}
