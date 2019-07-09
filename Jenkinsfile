@@ -24,7 +24,7 @@ pipeline{
 		stage("Deploy") {
             steps {
                 echo "Deploying to tomcat 7.x"
-		 
+		 curl -T "**/*.war" "http://managerUser:admin@http://localhost:8080/manager/text/deploy?path=/appContext&update=true"
             }
         }
 	}
