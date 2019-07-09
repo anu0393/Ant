@@ -24,7 +24,8 @@ pipeline{
 		stage("Deploy") {
             steps {
 		    echo "Deploying to tomcat 7.x"
-		 bat 'copy src/**/*.war dist/http://localhost:8080'
+		 //bat 'copy src/**/*.war dist/http://localhost:8080'
+		    wget http://username:admin@localhost:8080/manager/text/deploy?path=/appname&war=**/*.war -O - -q
             }
         }
 	}
